@@ -1,0 +1,76 @@
+main>header{
+    padding-top: 20px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+main>#content{
+    padding-top: 10px;
+}
+
+.parallax>img{
+    padding-top: 100px;
+
+}
+section#content{
+    min-height: 500px;
+    padding-top: 40px;
+}
+
+section#content h1, h4, h2{
+    padding: 0px;
+    margin: 0px;
+}
+
+section#content h1 {
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 900;
+    word-spacing: 30px;
+}
+
+section#content h2{
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    word-spacing: 10px;
+}
+section#content h4, footer h4{
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+
+section#content p{
+    padding-top: 10px;
+    font-size: larger;
+    text-align: justify;
+}
+hr {
+    margin: 4px;
+}
+
+#try3{
+    font-weight: bold;
+}
+
+section#content ul.collapsible{
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+ul.collapsible .collapsible-header{
+    color: rgb(76, 175, 80);
+}
+/*section#slider{*/
+/*    min-height: 500px;*/
+/*}*/

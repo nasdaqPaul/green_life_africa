@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block body %}
+    <!-- page header -->
+    <header>
+        <nav>
+            <div class="nav-wrapper green">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                {#                <a href="#!" class="brand-logo center"><img width="80" height="auto" class="responsive-img"src="static/images/main_logo.gif"></a>#}
+                <ul class="left hide-on-med-and-down">
+                    {% if active_nav_link == "home" %}
+                        <li class="active"><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li><a href="services"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                        <li><a href="about"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                        <li><a href="contact"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+                    {% elif active_nav_link == "services" %}
+                        <li><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li class="active"><a href="services"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                        <li><a href="about"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                        <li><a href="contact"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+                    {% elif active_nav_link == "about" %}
+                        <li><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li><a href="services"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                        <li class="active"><a href="about"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                        <li><a href="contact"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+                    {% elif active_nav_link == "contact" %}
+                        <li><a href="home"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li><a href="services"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                        <li><a href="about"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                        <li class="active"><a href="contact"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+                    {% endif %}
+                </ul>
+                <!-- Social media links -->
+                <ul class="right">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/glifeafrica" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/greenlifeafricake/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li class="hide-on-med-and-down"><a href="mobile.html" style="margin-left: 80px"><i class="material-icons">account_circle</i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <ul id="slide-out" class="sidenav">
+{#            <li>#}
+{#                <div class="user-view">#}
+{#                    <div class="background">#}
+{#                        <img src="images/office.jpg">#}
+{#                    </div>#}
+{#                    <a href="#user"><img class="circle" src="images/yuna.jpg"></a>#}
+{#                    <a href="#name"><span class="white-text name">John Doe</span></a>#}
+{#                    <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>#}
+{#                </div>#}
+{#            </li>#}
+            <li><a class="subheader orange-text">Navigation</a></li>
+            {% if active_nav_link == "home" %}
+                <li class="active"><a href="home" class="waves-effect waves-orange"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                <li><a href="services" class="waves-effect waves-orange"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                <li><a href="about" class="waves-effect waves-orange"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                <li><a href="contact" class="waves-effect waves-orange"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+            {% elif active_nav_link == "services" %}
+                <li><a href="home" class="waves-effect waves-orange"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                <li class="active"><a href="services" class="waves-effect waves-orange"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                <li><a href="about" class="waves-effect waves-orange"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                <li><a href="contact" class="waves-effect waves-orange"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+            {% elif active_nav_link == "about" %}
+                <li><a href="home" class="waves-effect waves-orange"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                <li><a href="services" class="waves-effect waves-orange"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                <li class="active"><a href="about" class="waves-effect waves-orange"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                <li><a href="contact" class="waves-effect waves-orange"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+            {% elif active_nav_link == "contact" %}
+                <li><a href="home" class="waves-effect waves-orange"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                <li><a href="services" class="waves-effect waves-orange"><i class="fa fa-tools fa-fw"></i> Services</a></li>
+                <li><a href="about" class="waves-effect waves-orange"><i class="fa fa-info-circle fa-fw"></i> About us</a></li>
+                <li class="active" class="waves-effect waves-orange"><a href="contact"><i class="fa fa-phone fa-fw"></i> Contact Us</a></li>
+            {% endif %}
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader orange-text">User account</a></li>
+            <li><a class="waves-effect waves-orange" href="#!">Log in</a></li>
+        </ul>
+
+    </header>
+
+
+    <main class="">
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    <!-- page footer -->
+    <footer class="page-footer orange darken-3">
+        <div class="container ">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <img src="static/images/main_logo.svg" height="150">
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                        content.</p>
+                </div>
+
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-info-circle fa-fw"></i> About
+                            Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-phone fa-fw"></i> Contact
+                            Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa fa-tools fa-fw"></i> Services</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+
+{% endblock %}
